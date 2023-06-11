@@ -1,0 +1,131 @@
+body {
+  background: violet;
+  margin: 0;
+}
+
+.main-container {
+  width: 100%;
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.analog-clock {
+  width: 230px;
+  height: 230px;
+  border-radius: 100%;
+  box-shadow: 0 0 2px black;
+  position: relative;
+  background-color: aqua;
+  font-size: 18px;
+  display: inline-block;
+  border: 10px solid orangered;
+}
+.one {
+  position: absolute;
+  right: 50px;
+  top: 25px;
+}
+.two {
+  position: absolute;
+  right: 15px;
+  top: 70px;
+}
+.three {
+  position: absolute;
+  right: 10px;
+  top: 115px;
+}
+.four {
+  position: absolute;
+  right: 30px;
+  bottom: 50px;
+}
+.five {
+  position: absolute;
+  right: 70px;
+  bottom: 25px;
+}
+.six {
+  position: absolute;
+  right: 115px;
+  bottom: 10px;
+}
+.seven {
+  position: absolute;
+  left: 60px;
+  bottom: 25px;
+}
+.eight {
+  position: absolute;
+  left: 25px;
+  bottom: 55px;
+}
+.nine {
+  position: absolute;
+  left: 10px;
+  top: 115px;
+}
+.ten {
+  position: absolute;
+  left: 15px;
+  top: 70px;
+}
+.eleven {
+  position: absolute;
+  left: 50px;
+  top: 25px;
+}
+.twelve {
+  position: absolute;
+  right: 110px;
+  top: 10px;
+}
+.dot {
+  width: 10px;
+  height: 10px;
+  background: black;
+  position: absolute;
+  left: 112px;
+  top: 115px;
+  border-radius: 100%;
+  z-index: 5;
+}
+.sec,
+.min,
+.hour {
+  position: relative;
+  transform-origin: bottom;
+  line-height: 45px;
+}
+.sec {
+  height: 90px;
+  width: 1px;
+  background: red;
+  z-index: 3;
+  left: 115px;
+  bottom: 115px;
+
+  transform: rotate();
+  animation: sec_anim 60s linear infinite;
+}
+.min {
+  width: 3px;
+  background: green;
+  height: 90px;
+  z-index: 2;
+  left: 115px;
+  bottom: 25px;
+  animation: min_anim 600s linear infinite;
+}
+.hour {
+  height: 60px;
+  width: 5px;
+  background: blue;
+
+  z-index: 1;
+  left: 115px;
+  top: 60px;
+  animation: hour_anim 60000s linear infinite;
+}
